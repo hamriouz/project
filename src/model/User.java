@@ -123,6 +123,11 @@ public class User {
         this.lifePoint -= amount;
     }
 
+    //TODO in dotaro ezafe kardam
+    public void increaseMoney(int amount){this.money -= amount;}
+
+    public void decreaseMoney(int amount){this.money += amount;}
+
     public Deck getDeckByName(String name){
         for (Deck deck : allDecks) {
             if (deck.getDeckName().equals(name)){
@@ -131,6 +136,13 @@ public class User {
         }
         return null;
     }
+
+    public int getMoney() {
+        return money;
+    }
+
+
+
     //TODO age lazem bood jaye pascalcase aadish kon
     public Card getCardByName(String name){
         for (Card card : allCards) {
@@ -159,4 +171,7 @@ public class User {
     public void addDeck(Deck deck){
         allDecks.add(deck);
     }
+
+    //TODO
+    public void addCardToUsersAllCards(Card card){allCards.add(card);}
 }
